@@ -1,0 +1,13 @@
+Na podstawie danych należy przewidzieć aktywność osoby za podstawie pomiarów z czujników.
+
+Analiza, oprócz wstępnej eksploracji danych, zaprojektowania modelu uczenia i wpływu pre-procesingu na wyniki, powinna obejmować następujące kwestie:
+
+1. Czy lepiej dokonać predykcji dla konkretnych aktywności, czy wyrażając stopień aktywności jako liczbę rzeczywista z pewnego przedziału tak aby większa aktywność odpowiadała wyższej wartości? 
+
+2. Czy lepiej stworzyć model globalny dla wszystkich uczestników czy osobny model dla każdej osoby?
+
+3. Odpowiedzieć jak długość obserwacji czynności wpływa na jakość klasyfikacji.
+
+Uwagi ogólne:
+- Porównać przynajmniej trzy różne modele 
+- Sformułować wnioski aby były zrozumiałe dla eksperta dziedzinowego, który niekoniecznie rozumie uczenie maszynowe, wyjaśnić co wpływa na wynik predykcji.
