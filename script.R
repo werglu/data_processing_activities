@@ -60,8 +60,20 @@ plot(ts(df1$y_wirst), ylim=c(-8,8), main="Walk mod 028", xlab="Time [Hz]", ylab=
 #plot(1:nrow(df1), df1$x_wirst, type = "l" )
 
 
-prcomp(df1[,1:6])
-pca(df1[,1:6])
+df1 <- df[df$Id == "028" & df$Activity == "jogging",]
+df1_pca <- prcomp(df1[,1:6])
+print(df1_pca)
+summary(df1_pca)
+
+install.packages("devtools")
+library(devtools)
+install_github("vqv/ggbiplot")
+require(ggbiplot)
+ggbiplot(df1_pca)
+ggscreeplot(df1_pca) #wykres osypiskowy
+
+df1_fit <- factanal(df1[,1:6], factors=2, rotation="none", scores="Bartlett")
+print(df1_fit, digits=2, cutoff=.3, sort=TRUE)
 
 
 #ujemmne wartosci
